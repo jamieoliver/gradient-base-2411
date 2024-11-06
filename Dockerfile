@@ -19,13 +19,13 @@ RUN apt-get update && apt-get install -y \
     gcc
 
 RUN add-apt-repository -y ppa:deadsnakes/ppa && apt-get install -y \
-    python3.13 \
-    python3.13-dev \
-    python3.13-venv \
+    python3.12 \
+    python3.12-dev \
+    python3.12-venv \
     python3-distutils-extra
 
-RUN ln -s /usr/bin/python3.13 /usr/local/bin/python3 && \
-    ln -s /usr/bin/python3.13 /usr/local/bin/python
+RUN ln -s /usr/bin/python3.12 /usr/local/bin/python3 && \
+    ln -s /usr/bin/python3.12 /usr/local/bin/python
 
 RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3
 ENV PATH=$PATH:/root/.local/bin
