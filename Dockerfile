@@ -49,7 +49,11 @@ RUN python3 -m pip --no-cache-dir install --upgrade \
     jupyterlab-git \
     ipykernel \
     ipywidgets \
-    matplotlib
+    matplotlib \
+    graphviz
+
+RUN apt-get update && apt-get install -y \
+    graphviz
 
 COPY run.sh .
 RUN chmod +x run.sh
